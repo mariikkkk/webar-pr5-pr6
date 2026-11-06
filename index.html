@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101827">
+  <title>WebAR — задания 5 и 6</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#f3f6fb;color:#142039;font:16px/1.6 system-ui,-apple-system,sans-serif}
+    main{max-width:960px;margin:0 auto;padding:64px 24px}header{max-width:700px;margin-bottom:38px}.eyebrow{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#4e6380}h1{font-size:clamp(32px,6vw,54px);line-height:1.12;letter-spacing:-.035em;margin:14px 0 20px}header p{color:#536279;font-size:18px}
+    .cards{display:grid;grid-template-columns:1fr 1fr;gap:20px}.card{display:flex;flex-direction:column;background:white;border:1px solid #dce3ee;border-radius:20px;padding:28px}.number{font-size:13px;font-weight:700;color:#486587}h2{font-size:25px;line-height:1.25;margin:12px 0}.card p{color:#536279;margin:0 0 26px}.button{display:block;margin-top:auto;background:#2256de;color:white;text-align:center;padding:14px 20px;border-radius:10px;text-decoration:none;font-weight:650}.button:hover{background:#1945ba}.button:focus-visible{outline:3px solid #162c59;outline-offset:4px}.secondary{background:#142039}.secondary:hover{background:#243959}
+    aside{margin-top:28px;padding:22px 26px;background:#e8eef8;border-radius:16px}aside strong{display:block;margin-bottom:6px}aside p{margin:0;color:#40516b}footer{margin-top:34px;font-size:14px;color:#536279}footer a{color:#2256de}
+    @media(max-width:640px){main{padding:36px 18px}.cards{grid-template-columns:1fr}.card{padding:24px}header{margin-bottom:26px}}
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <div class="eyebrow">Практическая работа 3 · WebAR</div>
+      <h1>Две сцены дополненной реальности</h1>
+      <p>Открой сцену на Android, разреши доступ к камере и запусти AR. На компьютере доступен обычный 3D-предпросмотр.</p>
+    </header>
+    <section class="cards" aria-label="Выбор задания">
+      <article class="card">
+        <div class="number">ЗАДАНИЕ 5 · THREE.JS</div>
+        <h2>Управление объектом</h2>
+        <p>Меняй цвет и форму, поворачивай объект и включай автовращение. Кнопка «Передо мной» возвращает объект в поле зрения.</p>
+        <a class="button" href="./three/">Открыть Three.js</a>
+      </article>
+      <article class="card">
+        <div class="number">ЗАДАНИЕ 6 · UNITY</div>
+        <h2>Объект перед наблюдателем</h2>
+        <p>Куб остаётся в центре при движении телефона — это режим viewer-space. Дождись загрузки сцены, затем нажми AR. Объём сборки — около 29 МБ.</p>
+        <a class="button secondary" href="./unity/">Открыть Unity</a>
+      </article>
+    </section>
+    <aside>
+      <strong>Для демонстрации</strong>
+      <p>Используй Chrome на Android с поддержкой WebXR. Проверено на OnePlus 15 с Android 17. Для поиска поверхности в Three.js направь камеру на освещённый стол или пол и немного подвигай телефон.</p>
+    </aside>
+    <footer><a href="https://github.com/mariikkkk/webar-pr5-pr6">Репозиторий проекта</a></footer>
+  </main>
+</body>
+</html>

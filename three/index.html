@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ru">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Практическая работа 5 — Three.js</title>
+<script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/"}}</script>
+<style>
+  * { box-sizing: border-box; }
+  body { margin: 0; overflow: hidden; font-family: Arial, sans-serif; background: #edf1f6; }
+  canvas { display: block; }
+  #overlay { position: fixed; inset: 0; pointer-events: none; }
+  header { position: absolute; top: 24px; left: 24px; right: 24px; color: #1e293b; }
+  h1 { font-size: 22px; margin: 0 0 8px; }
+  #status { font-size: 14px; max-width: 460px; }
+  #panel { position: absolute; left: 12px; right: 12px; bottom: max(12px, env(safe-area-inset-bottom)); max-width: 560px;
+    margin: auto; padding: 14px; border-radius: 16px; background: rgba(255,255,255,.95); pointer-events: auto; box-shadow: 0 4px 24px #0002; }
+  .row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin: 5px 0; }
+  label { font-size: 14px; display: flex; align-items: center; gap: 8px; }
+  button, select { min-height: 44px; padding: 8px 12px; border: 1px solid #cbd5e1; border-radius: 8px; background: white; color: #172033; font-size: 14px; }
+  button { cursor: pointer; }
+  #start { background: #2563eb; color: white; border: 0; flex: 1; }
+  input[type=color] { width: 48px; height: 42px; border: 0; background: transparent; }
+  :disabled { opacity: .5; cursor: default; }
+  :xr-overlay { background: transparent; }
+  :xr-overlay header { color: white; text-shadow: 0 1px 3px black; }
+</style>
+<div id="overlay">
+  <header><h1>Управление 3D-объектом</h1><div id="status" role="status">Загрузка сцены…</div></header>
+  <section id="panel" aria-label="Управление объектом">
+    <div class="row">
+      <label>Объект <select id="model"><option value="cube">Куб</option><option value="sphere">Сфера</option><option value="torus">Тор</option></select></label>
+      <label>Цвет <input id="color" type="color" value="#2196f3"></label>
+    </div>
+    <div class="row"><button id="left">↶ −15°</button><button id="right">↷ +15°</button><button id="spin" aria-pressed="false">Автовращение</button><button id="reset">Сброс</button></div>
+    <div class="row"><button id="start" disabled>Проверка AR…</button><button id="place" hidden>Передо мной</button><button id="exit" hidden>Выйти из AR</button></div>
+  </section>
+</div>
+<script type="module" src="./src/main.js"></script>
+</html>
